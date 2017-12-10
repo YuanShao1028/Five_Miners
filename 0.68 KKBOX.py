@@ -11,11 +11,16 @@ import numpy as np
 import os
 from collections import Counter
 
-train_path = os.path.expanduser('/Users/apple/Desktop/KKBOX/train.csv')
-test_path = os.path.expanduser('/Users/apple/Desktop/KKBOX/test.csv')
-songs_path = os.path.expanduser('/Users/apple/Desktop/KKBOX/songs.csv')
-members_path = os.path.expanduser('/Users/apple/Desktop/KKBOX/members.csv')
-song_extra_path = os.path.expanduser('/Users/apple/Desktop/KKBOX/song_extra_info.csv')
+data_path = '/Users/apple/Desktop/KKBOX/'
+output_train = 'train_1_eng'
+output_test = 'test_1_eng'
+
+
+train_path = os.path.expanduser(data_path + 'train.csv')
+test_path = os.path.expanduser(data_path + 'test.csv')
+songs_path = os.path.expanduser(data_path + 'songs.csv')
+members_path = os.path.expanduser(data_path + 'members.csv')
+song_extra_path = os.path.expanduser(data_path + 'song_extra_info.csv')
 
 train = pd.read_csv(train_path, dtype={'target' : np.uint8,})
 test = pd.read_csv(test_path)
@@ -164,8 +169,8 @@ for col in train.columns:
         test[col] = test[col].astype('category')
 
 
-train.to_csv('train_1_eng',index = False)
-test.to_csv('test_1_eng',index = False)
+train.to_csv(output_train,index = False)
+test.to_csv(output_test,index = False)
 
 
 
@@ -176,6 +181,7 @@ test.to_csv('test_1_eng',index = False)
 
 
 '''@@@@@@@@@@@@@@@@@@@@@@@tool area@@@@@@@@@@@@@@@@@@@@@@@'''
+'''
 for each in train.columns:
     print(str(each) + (25-len(each))*' ' + str(train[each].dtype))
 
@@ -220,9 +226,7 @@ for each in numerical_col:
     corr[each] = c
 
 
-
-
-
+'''
 
 
 
