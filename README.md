@@ -4,7 +4,7 @@ Project link:<br>
 https://github.com/YuanShao1028/Five_Miners
 
 Data source:<br>
-Dataset from KKBOX: https://www.kaggle.com/c/kkbox-music-recommendation-challenge/data
+KKBOX: https://www.kaggle.com/c/kkbox-music-recommendation-challenge/data
 
 
 File Description:<br>
@@ -21,12 +21,12 @@ Run:
 python feature.py  
 ```
 
-\# [optional] meancode_transfer
+\# [optional] Mean Encoding
 ```
 # python meancode_transfer.py
 ```
 
-2. model training and test
+2. model training and testing
 ```
 python train.py 
 ```
