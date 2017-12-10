@@ -168,7 +168,7 @@ local_result = model_new.predict(train_val.drop('target',axis = 1))
 score = metrics.roc_auc_score(train_val['target'], pred_y)
 
 
-
+'''
 '''@@@@@@@@@@@@@@@@@@@@@@@tool area@@@@@@@@@@@@@@@@@@@@@@@'''
 train['song_year'].describe()
 Counter(train['artist_name'])
@@ -185,5 +185,5 @@ feature_importance_new = pd.Series(index = model.feature_name(),data = model_new
 model = lgb.Booster(model_file = '/Users/apple/Desktop/KKBOX/models/0.6875')
 
 
-
+'''
 
